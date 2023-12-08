@@ -76,6 +76,11 @@ def get_steps(map: dict[str, list[str]], instructions: str, start: str):
     return 0
 
 
+# We can find the steps it takes for each starting position to reach the destination
+# and then find the least common multiple of all these lengths.
+# This works because we know that there is a cycle that starts at each destination.
+# This means that once we reach the destination we will always reach it again after an equal number of steps
+# (the total steps will then be a multiple of the initial steps it took to reach the cycle).
 def num_steps_2(text: str):
     instructions = text.split("\n\n")[0]
     map_raw = text.split("\n\n")[1].splitlines()
