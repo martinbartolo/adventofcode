@@ -117,7 +117,7 @@ def count_inside(text: str):
     walls = ["|", "L", "J"]
     total = 0
     for i, line in enumerate(lines):
-        for j, char in enumerate(line):
+        for j, _ in enumerate(line):
             if distances[i][j] != float("inf"):
                 continue
             idx = j
