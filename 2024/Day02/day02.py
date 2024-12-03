@@ -12,9 +12,9 @@ def is_valid_sequence(nums):
         diff = nums[i] - nums[i - 1]
         if diff < -3 or diff == 0 or diff > 3:
             return False
-        if diff < 0 and increasing == True:
+        if diff < 0 and increasing is True:
             return False
-        if diff > 0 and increasing == False:
+        if diff > 0 and increasing is False:
             return False
         if diff > 0:
             increasing = True
