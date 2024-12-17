@@ -55,7 +55,7 @@ def part1(a: int, b: int, c: int, program: list[int]):
 
 
 def part2(b: int, c: int, program: list[int]):
-    a = 1569800000570882
+    a = 156985331221000
     prev = 0
     while True:
         # print(a)
@@ -66,8 +66,7 @@ def part2(b: int, c: int, program: list[int]):
             print(a, len(output_values), a - prev, output_values, program)
             prev = a
         if output_values == program:
-            print(a)
-            break
+            return a
         # if len(output_values) < 16:
         #     print(a)
         #     a *= 2
